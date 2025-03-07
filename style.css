@@ -10,8 +10,6 @@ body.night-mode .funciones-de-calculo {
     color: #e0e0e0; /* Lighter text for better contrast in dark mode */
 }
 
-
-
 body {
     font-family: 'Arial', sans-serif;
     background: linear-gradient(120deg, #f0f4f8, #e0e7ef); /* Softer gradient background */
@@ -150,7 +148,6 @@ h2 {
     background-color: #007bff; /* Lighter blue for better readability */
 }
 
-
 .night-mode .group:hover {
     background-color: #4a3dbb;
 }
@@ -170,5 +167,4 @@ h2 {
     }
 
     /* Removed empty ruleset for .container */
-
 }
