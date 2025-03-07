@@ -1,0 +1,174 @@
+.night-mode .funciones-de-calculo {
+    color: #ffffff; /* White text for the link in dark mode */
+}
+
+body.night-mode .night-mode-adaptive {
+    color: #e0e0e0; /* Lighter text for dark mode for better contrast */
+}
+
+body.night-mode .funciones-de-calculo {
+    color: #e0e0e0; /* Lighter text for better contrast in dark mode */
+}
+
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(120deg, #f0f4f8, #e0e7ef); /* Softer gradient background */
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    transition: background 0.3s, color 0.3s, padding 0.3s; /* Added transition for padding */
+    scroll-behavior: smooth; /* Added smooth scrolling */
+    text-align: center; /* Centering text */
+}
+
+h2 {
+    color: #6c5ce7;
+    margin-bottom: 15px; /* Reduced margin for better spacing */
+    font-weight: 600;
+    font-size: 1.8em; /* Increased font size for better visibility */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Added text shadow for depth */
+}
+
+.site-description {
+    font-size: 1.2em; /* Font size for the description */
+    color: #555; /* Slightly darker color for contrast */
+    margin: 10px 0 20px; /* Spacing around the description */
+}
+
+.container {
+    display: grid; /* Changed to grid layout for better organization */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Space between cards */
+    padding: 20px; /* Padding around the container */
+}
+
+.post-it {
+    background-color: #ffeb3b; /* Post-it yellow */
+    border-radius: 15px; /* Rounded corners */
+    padding: 20px; /* Padding inside the card */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effect */
+    text-align: left; /* Align text to the left for better readability */
+}
+
+.post-it:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+/* Input Styles */
+.input {
+    color: #333;
+    border: 2px solid #6c5ce7;
+    border-radius: 10px;
+    padding: 12px 15px; /* Adjusted padding for better fit */
+    background: #f8f9fa;
+    width: calc(100% - 30px); /* Adjusted width to fit within the post-it */
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s, background 0.3s; /* Updated transition */
+    margin-bottom: 15px; /* Space below input fields */
+}
+
+.input:focus {
+    border-color: #5a4dcc;
+    box-shadow: 0 0 10px rgba(108, 92, 231, 0.3);
+    outline: none;
+}
+
+/* Button Styles */
+.group {
+    background: linear-gradient(45deg, #6c5ce7, #5a4dcc);
+    color: white;
+    border: none;
+    border-radius: 20px; /* Increased border-radius for a softer look */
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Added shadow for depth */
+    transition: background 0.3s, transform 0.2s, box-shadow 0.3s; /* Updated transition */
+    margin-top: 10px; /* Add spacing above the button */
+}
+
+.group:hover {
+    background-color: #5a4dcc;
+    transform: translateY(-3px);
+}
+
+.group:active {
+    transform: translateY(0);
+}
+
+/* Reset Button Styles */
+.reset-container {
+    display: flex;
+    justify-content: center; /* Center the button horizontally */
+    margin-top: 20px; /* Space above the button */
+    transition: opacity 0.3s ease; /* Added transition for opacity */
+}
+
+.reset-container .group {
+    background: linear-gradient(45deg, #6c5ce7, #5a4dcc);
+    color: white;
+    border: none;
+    border-radius: 20px; /* Consistent border-radius */
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    transition: background 0.3s, transform 0.2s, box-shadow 0.3s; /* Transition effects */
+}
+
+.reset-container .group:hover {
+    background-color: #5a4dcc;
+    transform: translateY(-3px);
+}
+
+.reset-container .group:active {
+    transform: translateY(0);
+}
+
+/* Night Mode Styles */
+.night-mode {
+    background: linear-gradient(120deg, #1a1a1a, #2d2d2d); /* Changed to gradient background */
+    color: #f8f9fa;
+}
+
+.night-mode .post-it {
+    background-color: #2d2d2d;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.night-mode .input {
+    border-color: #f8f9fa;
+    color: #f8f9fa;
+    background: #2d2d2d;
+}
+
+.night-mode .group {
+    background-color: #007bff; /* Lighter blue for better readability */
+}
+
+
+.night-mode .group:hover {
+    background-color: #4a3dbb;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+
+    .post-it {
+        padding: 15px; /* Adjusted padding for smaller screens */
+    }
+
+    .input {
+        max-width: 100%;
+    }
+
+    /* Removed empty ruleset for .container */
+
+}

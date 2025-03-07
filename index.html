@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora Multifuncional - Herramientas de Cálculo y Conversión</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Modal styles */
+    .modal {
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 1; /* Sit on top */
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgb(0,0,0); /* Fallback color */
+      background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+      justify-content: center; /* Center modal content */
+      align-items: center; /* Center modal content */
+    }
+    .modal-content {
+      background-color: rgb(47, 42, 122);
+      color: white;
+
+      margin: auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <button class="group" onclick="toggleNightMode()" aria-label="Toggle Night Mode">Toggle Night Mode</button>
+  
+  <a href="#" id="calculoLink" style="text-align: center; display: block; margin-top: 20px;">Funciones de Cálculo y Conversión</a>
+
+  <div class="modal" id="myModal">
+    <div class="modal-content">
+      <p>Utiliza herramientas para calcular y convertir. Asegúrate de ingresar valores válidos.</p>
+      <button onclick="closeModal()">Cerrar</button>
+    </div>
+  </div>
+
+  <div class="container">
+    <section class="post-it">
+      <h2>Calcular IMC</h2>
+      <input placeholder="Altura (m)" class="input" id="alturaIMC" type="number" step="0.01" title="Ingrese su altura en metros" />
+      <input placeholder="Peso (kg)" class="input" id="pesoIMC" type="number" step="0.01" title="Ingrese su peso en kilogramos" />
+      <button class="group" onclick="mostrarIMC()">Calcular IMC</button>
+      <p id="resultadoIMC" style="display: none;"></p>
+    </section>
+
+    <section class="post-it">
+      <h2>Calcular Factorial</h2>
+      <input placeholder="Número para el factorial" class="input" id="numeroFactorial" type="number" title="Ingrese un número para calcular su factorial" />
+      <button class="group" onclick="mostrarFactorial()">Calcular Factorial</button>
+      <p id="resultadoFactorial" style="display: none;"></p>
+      <p id="resultadoFactorial2" style="display: none;"></p>
+    </section>
+
+    <section class="post-it">
+      <h2>Convertir Dólares a Reales</h2>
+      <input placeholder="Dólares" class="input" id="dolares" type="number" step="0.01" title="Ingrese la cantidad en dólares" />
+      <button class="group" onclick="mostrarConversion()">Convertir</button>
+      <p id="resultadoConversion" style="display: none;"></p>
+    </section>
+
+    <section class="post-it">
+      <h2>Área y Perímetro Rectangular</h2>
+      <input placeholder="Altura (m)" class="input" id="alturaRectangular" type="number" step="0.01" title="Ingrese la altura del rectángulo en metros" />
+      <input placeholder="Anchura (m)" class="input" id="anchuraRectangular" type="number" step="0.01" title="Ingrese la anchura del rectángulo en metros" />
+      <button class="group" onclick="mostrarAreaPerimetroRectangular()">Calcular</button>
+      <p id="resultadoRectangular" style="display: none;"></p>
+    </section>
+
+    <section class="post-it">
+      <h2>Área y Perímetro Circular</h2>
+      <input placeholder="Radio (m)" class="input" id="radioCircular" type="number" step="0.01" title="Ingrese el radio del círculo en metros" />
+      <button class="group" onclick="mostrarAreaPerimetroCircular()">Calcular</button>
+      <p id="resultadoCircular" style="display: none;"></p>
+    </section>
+
+    <section class="post-it">
+      <h2>Tabla de Multiplicar</h2>
+      <input placeholder="Número para la tabla" class="input" id="numeroTabla" type="number" title="Ingrese un número para mostrar su tabla de multiplicar" />
+      <button class="group" onclick="mostrarTabla()">Mostrar Tabla</button>
+      <p id="resultadoTabla" style="display: none;"></p>
+    </section>
+  </div>
+
+  <div class="reset-container" style="text-align: center; margin-top: 20px;">
+    <button class="group" id="resetButton">Reiniciar Preguntas</button>
+  </div>
+
+  <noscript>
+    <div class="no-js-warning">
+      <p>JavaScript está deshabilitado en tu navegador. Algunas funciones pueden no estar disponibles.</p>
+    </div>
+  </noscript>
+
+  <script src="app.js"></script>
+  <script>
+    document.getElementById('calculoLink').addEventListener('click', function(event) {
+      event.preventDefault(); // Prevent the default anchor behavior
+      document.getElementById('myModal').style.display = "flex"; // Show the modal
+    });
+
+    function closeModal() {
+      document.getElementById('myModal').style.display = "none"; // Hide the modal
+    }
+  </script>
+</body>
+</html>
